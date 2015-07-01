@@ -13,7 +13,65 @@
 </head>
 
 <body>
-    
+	<header>
+		<div class="topLine">
+			<div class="container">
+				<div class="topLine-left">				
+					<p>Наши проекты:</p>
+					<a href="http://promo.itpanda.ru">promo.itpanda.ru</a>
+					<a href="http://shop.itpanda.ru">shop.itpanda.ru</a>
+				</div>
+				<div class="topLine-right">
+					<ul>
+						<li><a href="">Новости</a></li>
+						<li><a href="">Вакансии</a></li>
+						<li><a href="">Генератор продаж</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="header">			
+				<div class="logo">
+					Генератор
+				</div>
+				<div class="slogan">
+					Решаем все задачи по созданию <br> и развитию сайтов в <!-- Екатеринбурге -->  
+					<div class="btn-group">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Екатеринбурге 
+							<span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Челябинск</a></li>
+							<li><a href="#">Москва</a></li>
+							<li><a href="#">Тюмень</a></li>
+							<li><a href="#">Вся Россия</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="headerPhone">
+					+7 (343) 226-01-36
+				</div>
+				<div class="headerButton">
+					<a href="#">Оставить заявку</a>
+				</div>
+			</div>
+		</div>
+		<nav class="navMeny">
+			<div class="container">
+				<ul>
+					<li><a href="#nowhere">Продукты под ключ</a></li>
+					<li><a href="#nowhere"> Недорогие решения</a></li>
+					<li><a href="#nowhere"> Услуги </a></li>
+					<li><a href="#nowhere">Портфолио</a></li>
+					<li><a href="#nowhere">О компании</a></li>
+					<li><a href="#nowhere">Контакты</a></li>
+					<li><a href="#nowhere" class="lastA">Блог</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>    
 <?php wp_footer(); ?>
 </body>
 </html>
