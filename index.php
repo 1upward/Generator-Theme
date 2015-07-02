@@ -71,7 +71,9 @@
 				</ul>
 			</div>
 		</nav>
-	</header>    
+	</header>
+    <?php echo do_shortcode("[news]");?>
+    <?php echo do_shortcode("[blog]");?>
 <?php wp_footer(); ?>
 </body>
 </html>
