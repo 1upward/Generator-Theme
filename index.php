@@ -259,6 +259,7 @@
 	</section>
 	<section class="jobs">
 		<div class="container">
+			<h1 class="blockTitle">Примеры работ: </h1>
 			<div class="row">
 			<!-- --------------Выгруска работ-------------- -->
 			<a href="#nowhere" class="jobItem">
