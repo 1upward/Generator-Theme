@@ -66,4 +66,8 @@ $(function() {
     wf.async = 'true';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
-  })(); 
+  })();
+
+   $(document).ready(function() {
+    $('.carousel').carousel({interval: 7000});
+  });

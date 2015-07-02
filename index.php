@@ -57,21 +57,91 @@
 					<a href="#">Оставить заявку</a>
 				</div>
 			</div>
+		</div>		
+	</header>
+	<nav class="navMeny">
+		<div class="container">
+			<ul>
+				<li><a href="#nowhere">Продукты под ключ</a></li>
+				<li><a href="#nowhere"> Недорогие решения</a></li>
+				<li><a href="#nowhere"> Услуги </a></li>
+				<li><a href="#nowhere">Портфолио</a></li>
+				<li><a href="#nowhere">О компании</a></li>
+				<li><a href="#nowhere">Контакты</a></li>
+				<li><a href="#nowhere" class="lastA">Блог</a></li>
+			</ul>
 		</div>
-		<nav class="navMeny">
-			<div class="container">
-				<ul>
-					<li><a href="#nowhere">Продукты под ключ</a></li>
-					<li><a href="#nowhere"> Недорогие решения</a></li>
-					<li><a href="#nowhere"> Услуги </a></li>
-					<li><a href="#nowhere">Портфолио</a></li>
-					<li><a href="#nowhere">О компании</a></li>
-					<li><a href="#nowhere">Контакты</a></li>
-					<li><a href="#nowhere" class="lastA">Блог</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>    
+	</nav>
+	<section class="sliderLine">
+		
+		<div id="myCarousel" class="carousel container-fluid slide">
+			<!-- Dot Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+			<!-- Items -->
+			<div class="carousel-inner">
+				<div class="row">
+				    <div class="active item">
+				    	<img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="" />
+						<div class="onSlideText">
+							<h1>Выполнение проектов под ключ</h1>
+				    		<p>С гарантией результата</p>
+				    		<a href="#">Узнать подробнее</a>
+				    	</div>
+				    </div>
+				    <div class="item">
+				    	<img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="" />
+				    	<div class="onSlideText">
+							<h1>Выполнение проектов под ключ</h1>
+				    		<p>С гарантией результата</p>
+				    		<a href="#">Узнать подробнее</a>
+				    	</div>
+				    </div>
+				    <div class="item">
+				    	<img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="" />
+				    	<div class="onSlideText">
+							<h1>Выполнение проектов под ключ</h1>
+				    		<p>С гарантией результата</p>
+				    		<a href="#">Узнать подробнее</a>
+				    	</div>
+				    </div>
+				    <div class="item">
+				    	<img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="" />
+				    	<div class="onSlideText">
+							<h1>Выполнение проектов под ключ</h1>
+				    		<p>С гарантией результата</p>
+				    		<a href="#">Узнать подробнее</a>
+				    	</div>
+				    </div>
+				</div>
+			</div>			
+		</div>
+	</section>
+
+	<section class="products">
+		<div class="container">
+			<h1 class="blockTitle">				
+				Основные продукты
+			</h1>
+			<a href="#" class="singleProduct">
+				<img height="203" src="<?php bloginfo('template_directory'); ?>/img/p1.png" alt="placeholder+image">
+				hello world
+			</a>
+			<a href="#" class="singleProduct">
+				<img src="<?php bloginfo('template_directory'); ?>/img/p2.png" alt="placeholder+image">
+				hello world
+			</a>
+			<a href="#" class="singleProduct">
+				<img src="<?php bloginfo('template_directory'); ?>/img/p3.png" alt="placeholder+image">
+				hello world
+			</a>
+		</div>
+	</section>
+
 <?php wp_footer(); ?>
 </body>
 </html>

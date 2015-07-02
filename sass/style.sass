@@ -1,8 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300&subset=latin,cyrillic-ext)
 body	
 	font-family: 'Open Sans', sans-serif
+html
+	min-width: 1106px 
 .container
 	width: 1106px
+	min-width: 1106px 
+.blockTitle
+	color: #5f5f5f
+	text-align: center
+	font-size: 48px
+	font-weight: 500
+
 .topLine
 	background-color: #e9eff2
 	padding: 15px	0	
@@ -105,10 +114,10 @@ body
 .navMeny
 	background: #3f3f3f
 	height: 49px
-	margin: 20px 0
 	padding: 0
 	float: left
 	width: 100%
+	display: block
 	z-index: 100 /* для отображения подпунктов поверх остальных блоков */
 	ul
 		clear: left
@@ -142,8 +151,71 @@ body
 			-webkit-background-size: 100%
 			-o-background-size: 100%
 			background-size: 100%
+.sliderLine
+	display: block
+	padding: 0 -15px
 
+.item
+	img
+		width: 100%
 
+.carousel-indicators li
+	width: 14px
+	height: 14px
+	border-radius: 50%
+	background-clip: padding-box
+	background-color: rgba(69,85,90,.36)
+	box-shadow: inset 0 1px 0 #252525
+	border: none 
+	bottom: 0 
+	margin: 0 2px
+.carousel-indicators .active
+	width: 14px
+	height: 14px
+	border-radius: 50%
+	background-clip: padding-box
+	box-shadow: 0 1px 0 rgba(0,0,0,.75)
+	background-image: linear-gradient(top, #fff 0%, #fff 16.67%, #fff 100%)
+	border: none 
+	margin: 0
+.onSlideText
+	display: block
+	position: absolute
+	width: 40%
+	top: 50px 
+	left: 50%
+	h1
+		color: #fff
+		font-size: 56px
+		font-weight: 500
+	p
+		color: #fff
+		font-size: 24px
+		font-weight: 500
+		padding-top: 25px
+	a
+		@extend p
+		display: inline-block
+		margin-top: 50px
+		padding-top: 0
+		padding-right: 50px
+		background-image: url("../img/onSlideMore.png")
+		background-position: center right
+		background-repeat: no-repeat 
+.products
+	display: block
+	padding: 50px 0
+.singleProduct
+	display: block
+	float: left
+	margin: 50px 5px 
+	width: 345px
+	height: 388px
+	border: 1px solid #d4d1d1
+	border-radius: 4px / 4px 4px 4px 4px
+	background-clip: padding-box
+	background-color: #fff
+	box-shadow: 0 5px 10px rgba(0,0,0,.14)
+	img
+		width: 100%
 
-
-		
