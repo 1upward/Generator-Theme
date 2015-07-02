@@ -56,7 +56,7 @@ $(function() {
 
 
   WebFontConfig = {
-    google: { families: [ 'Open+Sans:400,600,700,800,300:cyrillic-ext,latin' ] }
+    google: { families: [ 'Open+Sans:200,400,600,700,800,300:cyrillic-ext,latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
