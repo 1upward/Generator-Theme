@@ -37,9 +37,45 @@ function prn($content) {
 
 
 function gen_menu_page(){
-    add_menu_page( 'gen_theme', 'Добавить работу', 'administrator', 'gen_theme', 'gen_theme_admin_page' );
+    add_menu_page( 'Добавить работу', 'Добавить работу', 'administrator', 'gen_theme', 'gen_theme_admin_page' );
+    add_menu_page( 'Добавить отзыв', 'Добавить отзыв', 'administrator', 'gen_reviews', 'gen_reviews_admin_page' );
 }
 add_action('admin_menu', 'gen_menu_page');
+
+function gen_reviews_admin_page(){
+    $parser = new Parser_generator_theme();
+    if(isset($_GET['action'])) {
+        if ($_GET['action'] == 'add_reviews') {
+            $parser->parse(GENERATOR_THEME_DIR . "/view/add_reviews_view.php", array(), true);
+        }
+
+        if ($_GET['action'] == 'del') {
+            $gen =new gen_theme();
+            $del = $gen->delete_reviews($_GET['id']);
+            print_reviews();
+        }
+    }
+    else{
+        if (isset($_POST['reviews'])){
+            $gen = new gen_theme();
+            $gen->add_reviews($_POST);
+        }
+
+        echo print_reviews();
+    }
+}
+
+function print_reviews(){
+    $parser = new Parser_generator_theme();
+    $gen =new gen_theme();
+    $res = $gen->get_reviews();
+   $data['reviews'] = "";
+    foreach ($res as $v) {
+        $data['reviews'] .= $parser->parse(GENERATOR_THEME_DIR."/view/reviews_box_view.php",array('text' => $v->text_reviews,'fio' => $v->fio,'name' => $v->name,'link' => $v->link,'id' => $v->id_reviews), false);
+    }
+
+    $parser->parse(GENERATOR_THEME_DIR."/view/reviews_view.php",$data, true);
+}
 
 function gen_theme_admin_page(){
     $parser = new Parser_generator_theme();
@@ -58,7 +94,6 @@ function gen_theme_admin_page(){
         if($_GET['action']=='del'){
             $gen =new gen_theme();
             $del = $gen->delete_work($_GET['id']);
-           // prn($del);
             $parser->parse(GENERATOR_THEME_DIR."/view/work_view.php",array(), true);
             print_work();
         }
@@ -186,6 +221,20 @@ function work_home_short(){
 add_shortcode('work','work_home_short');
 
 
+function reviews_home_short(){
+    $parser = new Parser_generator_theme();
+    $gen =new gen_theme();
+    $res = $gen->get_reviews_one();
+     $kol = $gen->get_all_reviews();
+    $ending = get_ending($kol);
+   // prn($res[0]->text_reviews);
+    $parser->parse(GENERATOR_THEME_DIR."/view/reviews/reviews_block_view.php",array('text' => $res[0]->text_reviews,'fio' => $res[0]->fio,'name' => $res[0]->name,'link' => $res[0]->link,'kol_reviews' =>$kol,'ending' => $ending), true);
+
+}
+add_shortcode('reviews','reviews_home_short');
+
+
+
 function date_smart($date_input, $time=false) {
     date_default_timezone_set( 'Europe/Moscow' );
     $monthes = array(
@@ -220,4 +269,21 @@ function date_smart($date_input, $time=false) {
 
     $result_date = date('j '.$month.' '.$year.$time, $date);
     return $result_date;
+}
+
+
+function get_ending($count){
+
+        $count = strval($count);
+        $last = $count{ strlen($count) - 1 } ;
+        if ($last == 1){
+            $res = 'отзыв';
+        }
+        if ($last == 2 || $last == 3 || $last == 4){
+            $res = 'отзыва';
+        }
+        if ($last >= 5){
+            $res = 'отзывов';
+        }
+return $res;
 }

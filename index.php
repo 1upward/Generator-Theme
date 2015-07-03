@@ -303,7 +303,7 @@
 		</div>
 	</section>
 
-
+    <?php echo do_shortcode("[reviews]");?>
     <?php echo do_shortcode("[news]");?>
     <?php echo do_shortcode("[blog]");?>
 <?php wp_footer(); ?>

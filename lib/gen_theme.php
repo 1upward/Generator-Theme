@@ -19,4 +19,40 @@ class gen_theme {
         global $wpdb;
         $wpdb->delete( 'work', array( 'id_work' => $id ) );
     }
+
+    function add_reviews($arr){
+        $data['text_reviews'] = $arr['text'];
+        $data['fio'] = $arr['fio'];
+        $data['name'] = $arr['name'];
+        $data['link'] = $arr['link'];
+        global $wpdb;
+        $wpdb->insert('reviews', $data );
+    }
+
+    function get_reviews(){
+        global $wpdb;
+        $res = $wpdb->get_results("SELECT * FROM reviews");
+        return $res;
+    }
+    function get_reviews_one(){
+        global $wpdb;
+        $res = $wpdb->get_results("SELECT * FROM reviews LIMIT 1");
+        return $res;
+    }
+
+    function delete_reviews($id){
+        global $wpdb;
+        $wpdb->delete( 'reviews', array( 'id_reviews' => $id ) );
+    }
+
+    function get_all_reviews(){
+        global $wpdb;
+        $res = $wpdb->get_results("SELECT * FROM reviews");
+        $k=0;
+        foreach($res as $v){
+            $k++;
+        }
+        return $k;
+    }
+
 } 
