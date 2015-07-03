@@ -262,36 +262,39 @@
 			<h1 class="blockTitle">Примеры работ: </h1>
 			<div class="row">
 			<!-- --------------Выгруска работ-------------- -->
-			<a href="#nowhere" class="jobItem">
+			<!--<a href="#nowhere" class="jobItem">
 				<span class="jobImg">
-					<img src="<?php bloginfo('template_directory'); ?>/img/siteEx1.png" alt="">
+					<img src="<?php /*bloginfo('template_directory'); */?>/img/siteEx1.png" alt="">
 				</span>
 				<p>Чистоffский</p>
 			</a>
 			<a href="#nowhere" class="jobItem">
 				<span class="jobImg">
-					<img src="<?php bloginfo('template_directory'); ?>/img/siteEx2.png" alt="">
+					<img src="<?php /*bloginfo('template_directory'); */?>/img/siteEx2.png" alt="">
 				</span>
 				<p>ЭРГОНОВА</p>
 			</a>
 			<a href="#nowhere" class="jobItem">
 				<span class="jobImg">
-					<img src="<?php bloginfo('template_directory'); ?>/img/siteEx3.png" alt="">
+					<img src="<?php /*bloginfo('template_directory'); */?>/img/siteEx3.png" alt="">
 				</span>
 				<p>Адвокат Саитов А.Т.</p>
 			</a>
 			<a href="#nowhere" class="jobItem">
 				<span class="jobImg">
-					<img src="<?php bloginfo('template_directory'); ?>/img/siteEx4.png" alt="">
+					<img src="<?php /*bloginfo('template_directory'); */?>/img/siteEx4.png" alt="">
 				</span>
 				<p>REMONT OTDELKA</p>
 			</a>
 			<a href="#nowhere" class="jobItem">
 				<span class="jobImg">
-					<img src="<?php bloginfo('template_directory'); ?>/img/siteEx5.png" alt="">
+					<img src="<?php /*bloginfo('template_directory'); */?>/img/siteEx5.png" alt="">
 				</span>
 				<p>stekoldi</p>
-			</a>
+			</a>-->
+                <?php echo do_shortcode("[work]");?>
+
+
 			<!-- --------------Выгруска работ-------------- -->
 			</div>
 			<div class="row">

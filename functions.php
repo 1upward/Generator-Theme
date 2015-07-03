@@ -4,6 +4,7 @@ define('GENERATOR_THEME_DIR', plugin_dir_path(__FILE__));
 define('GENERATOR_THEME_URL', plugin_dir_url(__FILE__));
 
 require_once(GENERATOR_THEME_DIR."/lib/parser_generator_theme.php");
+require_once(GENERATOR_THEME_DIR."/lib/gen_theme.php");
 
 function add_style(){
     wp_enqueue_style( 'my-bootstrap-extension', get_template_directory_uri() . '/css/bootstrap.css', array(), '1');
@@ -31,6 +32,72 @@ function prn($content) {
     echo '</pre>';
 }
 
+
+/*----------ADMIN--------------*/
+
+
+function gen_menu_page(){
+    add_menu_page( 'gen_theme', 'Добавить работу', 'administrator', 'gen_theme', 'gen_theme_admin_page' );
+}
+add_action('admin_menu', 'gen_menu_page');
+
+function gen_theme_admin_page(){
+    $parser = new Parser_generator_theme();
+
+    if (function_exists('wp_enqueue_media')) {
+        wp_enqueue_media();
+    } else {
+        wp_enqueue_style('thickbox');
+        wp_enqueue_script('media-upload');
+        wp_enqueue_script('thickbox');
+    }
+    if(isset($_GET['action'])){
+        if($_GET['action']=='add_work'){
+            $parser->parse(GENERATOR_THEME_DIR."/view/add_work_view.php",array(), true);
+        }
+        if($_GET['action']=='del'){
+            $gen =new gen_theme();
+            $del = $gen->delete_work($_GET['id']);
+           // prn($del);
+            $parser->parse(GENERATOR_THEME_DIR."/view/work_view.php",array(), true);
+            print_work();
+        }
+    }
+    else{
+        if (isset($_POST['attachment_url'])){
+            $gen = new gen_theme();
+            $gen->add_work($_POST);
+
+        }
+        $parser->parse(GENERATOR_THEME_DIR."/view/work_view.php",array(), true);
+       echo print_work();
+
+    }
+}
+
+function print_work(){
+    $parser = new Parser_generator_theme();
+    $gen =new gen_theme();
+    $res = $gen->get_work();
+    foreach ($res as $v) {
+             $parser->parse(GENERATOR_THEME_DIR."/view/work_box_view.php",array('images' => $v->images,'name' => $v->name,'link' => $v->link,'id' => $v->id_work), true);
+    }
+}
+
+// load script to admin
+function admin_js() {
+    $url = get_template_directory_uri()  . '/js/admin.js';
+    echo "<script type='text/javascript' src='$url'></script>";
+
+}
+add_action('admin_head', 'admin_js');
+
+
+
+
+
+
+/*------------END ADMIN--------------*/
 function my_pagenavi() {
     global $wp_query;
 
@@ -108,7 +175,15 @@ function news_home(){
 }
 add_shortcode('news','news_home');
 
-
+function work_home_short(){
+    $parser = new Parser_generator_theme();
+    $gen =new gen_theme();
+    $res = $gen->get_work();
+    foreach ($res as $v) {
+        $parser->parse(GENERATOR_THEME_DIR."/view/works/work_view.php",array('images' => $v->images,'name' => $v->name,'link' => $v->link), true);
+    }
+}
+add_shortcode('work','work_home_short');
 
 
 function date_smart($date_input, $time=false) {
