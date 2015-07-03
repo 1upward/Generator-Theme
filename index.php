@@ -410,9 +410,6 @@
 								<p>Аналитик</p>
 							</div>
 
-<<<<<<< HEAD
-    <?php echo do_shortcode("[reviews]");?>
-=======
 							<div class="teamMember">
 								<img src="<?php bloginfo('template_directory'); ?>/img/l34.png" alt="placeholder+image">
 								<h3>Андрей</h3>
@@ -437,7 +434,7 @@
 		</div>
 	</section>
 
->>>>>>> 809203d7c2fa542f529e60aef31221be5cc57b11
+    <?php echo do_shortcode("[reviews]");?>
     <?php echo do_shortcode("[news]");?>
     <?php echo do_shortcode("[blog]");?>
 <?php wp_footer(); ?>
