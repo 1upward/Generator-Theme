@@ -302,8 +302,142 @@
 			</div>
 		</div>
 	</section>
+	<section class="figures">
+		<div class="container">
+			<h1 class="blockTitle whiteText">Мы в цифрах:</h1>
+			<div class="figuresBlock">
+				<div class="figureImg">
+					<img src="<?php bloginfo('template_directory'); ?>/img/figure1.png" alt="">
+				</div>
+				<h3>40 специалистов в штате</h3>
+			</div>
+			<div class="figuresBlock">
+				<div class="figureImg">
+					<img src="<?php bloginfo('template_directory'); ?>/img/figure2.png" alt="">
+				</div>
+				<h3>3000 выполненных проектов</h3>
+			</div>
+			<div class="figuresBlock">
+				<div class="figureImg">
+					<img src="<?php bloginfo('template_directory'); ?>/img/figure3.png" alt="">
+				</div>
+				<h3>10 специалистов работает над одним проектом</h3>
+			</div>
+			<div class="figuresBlock">
+				<div class="figureImg">
+					<img src="<?php bloginfo('template_directory'); ?>/img/figure4.png" alt="">
+				</div>
+				<h3>5 лет на рынке</h3>
+			</div>
+			<div class="figuresBlock">
+				<div class="figureImg">
+					<img src="<?php bloginfo('template_directory'); ?>/img/figures5.png" alt="">
+				</div>
+				<h3>4 года средний опыт специалиста в отрасли</h3>
+			</div>
+		</div>
+	</section>
+	<section class="oneTeam">
+		<div class="container">
+			<div class="oneTeamBlock">
+				<h1 class="blockTitle">Одна из команд проекта:</h1>
+				<div class="row">
+					<div class="row">
+						<div class="teamLine">
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l11.png" alt="placeholder+image">
+								<h3>Елизавета</h3>
+								<p>Директолог</p>
+							</div>
 
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l12.png" alt="placeholder+image">
+								<h3>Константин</h3>
+								<p>Технический менеджер</p>
+							</div>
+
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l13.png" alt="placeholder+image">
+								<h3>Виталий</h3>
+								<p>Маркетолог</p>
+							</div>
+
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l14.png" alt="placeholder+image">
+								<h3>Алина</h3>
+								<p>Дизайнер</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="teamLine  temLine2">
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l21-1.png" alt="placeholder+image">
+								<h3>Олег</h3>
+								<p>Верстальщик</p>
+							</div>
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l22.png" alt="placeholder+image">
+								<h3>Алексей</h3>
+								<p>Веб-мастер</p>
+							</div>
+
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l23.png" alt="placeholder+image">
+								<h3>Аркадий</h3>
+								<p>Программист</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="teamLine">
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l31.png" alt="placeholder+image">
+								<h3>Михаил</h3>
+								<p>Специалист по подбору семантики</p>
+							</div>
+						
+
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l32.png" alt="placeholder+image">
+								<h3>Юлия</h3>
+								<p>Корректор-копирайтер</p>
+							</div>
+
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l33.png" alt="placeholder+image">
+								<h3>Антон</h3>
+								<p>Аналитик</p>
+							</div>
+
+<<<<<<< HEAD
     <?php echo do_shortcode("[reviews]");?>
+=======
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/l34.png" alt="placeholder+image">
+								<h3>Андрей</h3>
+								<p>SEO-специалист</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="teamLine">
+							<div class="teamMember">
+								<img src="<?php bloginfo('template_directory'); ?>/img/teamLine4.png" alt="placeholder+image">
+								<h3>Екатерина</h3>
+								<p>Аккаунт менеджер</p>
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="row">
+					<a href="#nowhere" class="jobsPortfolio">Запросить портфолио</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+>>>>>>> 809203d7c2fa542f529e60aef31221be5cc57b11
     <?php echo do_shortcode("[news]");?>
     <?php echo do_shortcode("[blog]");?>
 <?php wp_footer(); ?>

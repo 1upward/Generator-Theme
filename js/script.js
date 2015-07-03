@@ -55,8 +55,8 @@ $(function() {
 });
 
 
-  WebFontConfig = {
-    google: { families: [ 'Open+Sans:200,400,600,700,800,300:cyrillic-ext,latin' ] }
+WebFontConfig = {
+    google: { families: [ 'Open+Sans:700,800,400:cyrillic-ext,latin', 'Open+Sans+Condensed:300:cyrillic-ext,latin' ] }
   };
   (function() {
     var wf = document.createElement('script');
@@ -67,7 +67,7 @@ $(function() {
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })();
-
+  
    $(document).ready(function() {
     $('.carousel').carousel({interval: 7000});
   });
