@@ -6,9 +6,10 @@
             </div>
             
             <div class = "reviews">
-                <div class = "textreviews">
+                <a href="#"><span class = "textreviews">
                     {text}
-                </div>
+                    </span>
+                </a>
                 <div class = "fioreviews">
                     {fio}
                 </div>
