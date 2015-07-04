@@ -10,7 +10,7 @@ html {
   width: 1106px;
   min-width: 1106px; }
 
-.blockTitle, .blog_wr span {
+.blockTitle, .blog_wr span, .modal-dialog .modal-header h1 {
   color: #5f5f5f;
   text-align: center;
   font-size: 48px;
@@ -122,8 +122,9 @@ html {
     text-align: center;
     line-height: 49px;
     outline: none; }
-  .headerButton a:hover {
-    text-decoration: none; }
+  .headerButton a:hover, .headerButton:focus, .headerButton:active {
+    text-decoration: none;
+    color: #FFF; }
 
 .navMeny {
   background: #3f3f3f;
@@ -500,6 +501,7 @@ html {
 
 .otherNewsBlock {
   display: block;
+  height: 160px;
   padding-bottom: 15px;
   margin-top: 30px;
   border-bottom: 1px solid #cccccc; }
@@ -752,7 +754,7 @@ footer {
     text-decoration: underline; }
 
 .footSlogan {
-  width: 57%;
+  width: 56%;
   display: block;
   float: left; }
   .footSlogan h3 {
@@ -791,7 +793,7 @@ footer {
       margin-top: 10px; }
 
 .footSoc {
-  width: 18%; }
+  width: 20%; }
   .footSoc h3 {
     color: #999;
     font-family: "OpenSans", sans-serif;
@@ -828,5 +830,81 @@ footer {
     .footSocList li a i.fb {
       background-image: url("../img/fb.png");
       background-position: center; }
+
+.modal-dialog {
+  width: 563px;
+  height: 717px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 15px 0 15px 15px; }
+  .modal-dialog .modal-header {
+    border-bottom: 0;
+    padding: 35px; }
+    .modal-dialog .modal-header h1 {
+      text-align: left;
+      font-size: 36px;
+      margin-bottom: 20px; }
+    .modal-dialog .modal-header p, .modal-dialog .modal-header .onSlideText a, .onSlideText .modal-dialog .modal-header a {
+      color: #7b7b7b;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 30px 0; }
+  .modal-dialog .close {
+    background-color: #5f5f5f;
+    background-image: url("../img/Close.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 49px;
+    height: 49px;
+    opacity: 1;
+    outline: none;
+    margin: -35px -85px; }
+
+.popUpSmall {
+  width: 310px;
+  float: right;
+  height: 45px;
+  line-height: 45px;
+  outline-color: #e53f35;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  background-clip: padding-box;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.13);
+  line-height: 45px;
+  padding-left: 15px; }
+
+.popUpText {
+  width: 310px;
+  height: 105px;
+  float: right;
+  resize: none;
+  outline-color: #e53f35;
+  border: 1px solid #c8c8c8;
+  border-radius: 3px;
+  background-clip: padding-box;
+  background-color: #f0f0f0;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.13);
+  padding-left: 15px; }
+
+.popUpSub {
+  width: 311px;
+  height: 63px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  background-color: #e53f35;
+  box-shadow: inset 0 -2px 0 #d5271b;
+  color: #FFF;
+  line-height: 63px;
+  float: right;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold; }
+
+.redS {
+  color: red; }
+
+.flex {
+  display: flex; }
 
 /*# sourceMappingURL=style.css.map */
