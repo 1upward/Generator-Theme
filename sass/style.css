@@ -907,4 +907,7 @@ footer {
 .flex {
   display: flex; }
 
+.content-area {
+  padding: 50px 0; }
+
 /*# sourceMappingURL=style.css.map */

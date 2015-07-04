@@ -301,7 +301,7 @@
 			<!-- --------------Выгруска работ-------------- -->
 			</div>
 			<div class="row">
-				<a href="#request" data-target="modal" class="jobsPortfolio">Запросить портфолио</a>
+				<a data-toggle="modal" href="#request" class="jobsPortfolio">Запросить портфолио</a>
 			</div>
 		</div>
 	</section>
@@ -488,16 +488,16 @@
    	</footer>
 
    	<div class="modal fade" id="request" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
-            <h1>Запросить коммерческое предложение</h1>            
-            <p>При заказе сайта до 14 июня 3000 рублей 
-            	в подарок на дополнительный функционал! До конца акции осталось:</p>
-            <?php echo do_shortcode("[contact-form-7 id='135' title='GeneratorRequest']"); ?>
-        </div>       
-    </div>
-</div>
+	    <div class="modal-dialog">
+	        <div class="modal-header">
+	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
+	            <h1>Запросить коммерческое предложение</h1>            
+	            <p>При заказе сайта до 14 июня 3000 рублей 
+	            	в подарок на дополнительный функционал! До конца акции осталось:</p>
+	            <?php echo do_shortcode("[contact-form-7 id='135' title='GeneratorRequest']"); ?>
+	        </div>       
+	    </div>
+	</div>
 <?php wp_footer(); ?>
 </body>
 </html>
