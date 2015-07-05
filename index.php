@@ -71,71 +71,60 @@
 				<li><a href="#blogL" class="lastA smoothScroll">Блог</a></li>
 			</ul>
 		</div>
-
-		<nav class="navMeny">
-			<div class="container">
-				<ul>
-					<li><a href="#nowhere">Продукты под ключ</a></li>
-					<li><a href="#nowhere"> Недорогие решения</a></li>
-					<li><a href="#nowhere"> Услуги </a></li>
-					<li><a href="#nowhere">Портфолио</a></li>
-					<li><a href="#nowhere">О компании</a></li>
-					<li><a href="#nowhere">Контакты</a></li>
-					<li><a href="#nowhere" class="lastA">Блог</a></li>
-				</ul>
-			</div>
-		</nav>
-	</header>
-
-	</nav>
+	
 	<section class="sliderLine">
 		
-		<div id="myCarousel" class="carousel container-fluid slide">
-			<!-- Dot Indicators -->
-			<ol class="carousel-indicators">
-				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-				<li data-target="#myCarousel" data-slide-to="1"></li>
-				<li data-target="#myCarousel" data-slide-to="2"></li>
-				<li data-target="#myCarousel" data-slide-to="3"></li>
-			</ol>
-			<!-- Items -->
-			<div class="carousel-inner">
-				<div class="row">
-				    <div class="active item">
-				    	<img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="" />
-						<div class="onSlideText">
+		<!-- -------------------ПРОБНЫЙ-------------------- -->
+		 <div id="myCarousel" class="carousel slide" data-interval="500" data-ride="carousel">
+                <!-- Индикаторы для карусели -->
+                <ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+					<li data-target="#myCarousel" data-slide-to="3"></li>
+				</ol>
+                <!-- Слайды карусели -->
+                <div class="carousel-inner">
+                    <!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
+                    <div class="active item">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/slide2.jpg" alt="Carousel Item Title">
+                        <div class="onSlideText">
 							<h1>Выполнение проектов под ключ</h1>
 				    		<p>С гарантией результата</p>
 				    		<a href="#">Узнать подробнее</a>
 				    	</div>
-				    </div>
-				    <div class="item">
-				    	<img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="" />
-				    	<div class="onSlideText">
+                    </div>
+                    <!-- Слайд №2 -->
+                    <div class="item">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="Carousel Item Title">
+                        <div class="onSlideText">
 							<h1>Выполнение проектов под ключ</h1>
 				    		<p>С гарантией результата</p>
 				    		<a href="#">Узнать подробнее</a>
 				    	</div>
-				    </div>
-				    <div class="item">
-				    	<img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="" />
-				    	<div class="onSlideText">
+                    </div>
+                    <!-- Слайд №3 -->
+                    <div class="item">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/slide2.jpg" alt="Carousel Item Title">
+                        <div class="onSlideText">
 							<h1>Выполнение проектов под ключ</h1>
 				    		<p>С гарантией результата</p>
 				    		<a href="#">Узнать подробнее</a>
 				    	</div>
-				    </div>
-				    <div class="item">
-				    	<img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="" />
-				    	<div class="onSlideText">
+                    </div>
+                    <!-- Слайд №4 -->
+                    <div class="item">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/slide4.jpg" alt="Carousel Item Title">
+                        <div class="onSlideText">
 							<h1>Выполнение проектов под ключ</h1>
 				    		<p>С гарантией результата</p>
 				    		<a href="#">Узнать подробнее</a>
 				    	</div>
-				    </div>
-				</div>
-			</div>			
-		</div>
+                    </div>
+                </div>
+               
+            </div>
+		<!-- -------------------ПРОБНЫЙ-------------------- -->
 	</section>
 
 	<section class="products">
