@@ -38,19 +38,18 @@
 				<div class="slogan">
 					Решаем все задачи по созданию <br> и развитию сайтов в <!-- Екатеринбурге -->  
 					<div class="btn-group">
-						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Екатеринбурге 
+						
+						<select name="city" id="myselect">
+							<option id="ecater" value="+7 (343) 226-01-36" selected>Екатеринбурге </option>
+							<option id="chel" value="+7 (351) 216-03-24">Челябинск</option>
+							<option id="mosc" value="+7 (499) 704-62-76">Москва </option>
+							<option id="tyumen" value="+7 (3452) 23-83-14">Тюмень </option>
+							<option id="allRus" value="&nbsp 8 (800) 333-69-90">Вся Россия </option>							
 							<span class="caret"></span>
-						</button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Челябинск</a></li>
-							<li><a href="#">Москва</a></li>
-							<li><a href="#">Тюмень</a></li>
-							<li><a href="#">Вся Россия</a></li>
-						</ul>
+						</select>
 					</div>
 				</div>
-				<div class="headerPhone">
+				<div class="headerPhone" id="mydiv">
 					+7 (343) 226-01-36
 				</div>
 				<div class="headerButton">

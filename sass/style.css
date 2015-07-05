@@ -93,6 +93,15 @@ html {
 .btn-group.open .dropdown-toggle {
   background: #FFF; }
 
+.btn-group select {
+  border: none;
+  color: #000;
+  font-weight: 100;
+  font-size: 14px;
+  padding-bottom: 4px; }
+  .btn-group select:hover, .btn-group select:active, .btn-group select:focus {
+    outline: none; }
+
 .headerPhone {
   padding: 0 20px;
   color: #5f5f5f;

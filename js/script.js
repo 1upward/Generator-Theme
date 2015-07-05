@@ -35,5 +35,9 @@ WebFontConfig = {
 })();
   
 jQuery(document).ready(function() {
-    jQuery('.carousel').carousel({interval: 500});
+    jQuery('.carousel').carousel({interval: 1500});    
+    document.getElementById("myselect").addEventListener("change", function () {
+    document.getElementById('mydiv').innerHTML = this.value;
 });
+});
+
