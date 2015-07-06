@@ -38,6 +38,21 @@ jQuery(document).ready(function() {
     jQuery('.carousel').carousel({interval: 1500});    
     document.getElementById("myselect").addEventListener("change", function () {
     document.getElementById('mydiv').innerHTML = this.value;
-});
+    });
 });
 
+var clock;
+        
+        $(document).ready(function() {
+            var clock;
+            clock = $('.clock').FlipClock({
+                clockFace: 'DailyCounter',
+                autoStart: false,   
+                lang: 'ru'  
+            });    
+
+            clock.setTime(440880);
+            clock.setCountdown(true);
+            clock.start();
+
+        });

@@ -8,17 +8,18 @@ html {
 
 .container {
   width: 1106px;
-  min-width: 1106px; }
+  min-width: 1106px;
+  padding: 0 15px; }
 
 .blockTitle, .blog_wr span, .modal-dialog .modal-header h1 {
   color: #5f5f5f;
   text-align: center;
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 500; }
 
 .topLine {
   background-color: #e9eff2;
-  padding: 15px 0; }
+  padding: 7px 0 10px; }
 
 .topLine-left {
   display: inline-block;
@@ -45,10 +46,11 @@ html {
   text-align: right; }
   .topLine-right ul {
     list-style: none;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-right: -20px; }
     .topLine-right ul li {
       display: inline-block;
-      margin-left: 30px; }
+      margin-left: 17px; }
       .topLine-right ul li a {
         color: #333;
         font-size: 16px;
@@ -222,7 +224,7 @@ html {
   left: 50%; }
   .onSlideText h1 {
     color: #fff;
-    font-size: 56px;
+    font-size: 52px;
     font-weight: 500; }
   .onSlideText p, .onSlideText a {
     color: #fff;
@@ -245,7 +247,7 @@ html {
 .singleProduct {
   display: block;
   float: left;
-  margin: 50px 10px;
+  margin: 30px 10px 45px;
   width: 345px;
   height: 405px;
   border: 1px solid #d4d1d1;
@@ -403,17 +405,20 @@ html {
   text-align: center;
   display: block;
   margin: 0 auto;
-  line-height: 40px; }
+  line-height: 35px; }
   .allServ:hover, .allServ:focus, .allServ:active {
     text-decoration: none; }
 
 .jobs {
   display: block;
-  padding: 50px 0; }
+  padding: 23px 0 60px; }
+
+.jobsPad {
+  padding: 22px 96px 29px; }
 
 .jobItem {
   width: 170px;
-  margin: 20px 25px;
+  margin: 20px 6px;
   display: block;
   float: left; }
   .jobItem p, .jobItem .onSlideText a, .onSlideText .jobItem a {
@@ -461,7 +466,12 @@ html {
   -moz-box-shadow: 0px 5px 10px 0px rgba(66, 185, 224, 0.5);
   box-shadow: 0px 5px 10px 0px rgba(66, 185, 224, 0.5); }
 
-.first_news, .other_news {
+.first_news {
+  width: 49%;
+  float: left;
+  padding-left: 40px; }
+
+.other_news {
   width: 50%;
   float: left; }
 
@@ -475,7 +485,7 @@ html {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.36);
   display: block;
   position: relative;
-  margin: 30px auto; }
+  margin: 45px auto; }
 
 .first_img {
   overflow: hidden;
@@ -521,10 +531,11 @@ html {
   display: block;
   height: 160px;
   padding-bottom: 15px;
-  margin-top: 30px;
+  margin-top: 45px;
   border-bottom: 1px solid #cccccc; }
   .otherNewsBlock:last-of-type {
-    border-bottom: none; }
+    border-bottom: none;
+    margin-top: 30px; }
   .otherNewsBlock .other_img {
     display: block;
     overflow: hidden;
@@ -546,13 +557,13 @@ html {
 .figures {
   display: block;
   background: #2ba7d9;
-  padding: 50px 0; }
+  padding: 35px 0 60px; }
 
 .figuresBlock {
   display: block;
   float: left;
   width: 20%;
-  margin: 75px 0; }
+  margin: 50px 0; }
   .figuresBlock .figureImg {
     width: 215px;
     height: 86px;
@@ -564,13 +575,15 @@ html {
   .figuresBlock h3 {
     text-align: center;
     color: #fff;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold; }
 
 .oneTeamBlock {
   display: block;
-  margin-top: -55px;
+  margin-top: -61px;
   padding: 50px 100px;
+  margin-right: 10px;
+  margin-left: 10px;
   border: 1px solid #d4d1d1;
   border-radius: 4px;
   background-clip: padding-box;
@@ -818,36 +831,35 @@ footer {
     font-size: 18px;
     font-weight: bold;
     text-align: center; }
-
-.footSocList {
-  display: block;
-  color: #fff;
-  list-style: none;
-  vertical-align: top;
-  margin: 15px auto;
-  padding: 0; }
-  .footSocList li {
-    display: inline-block; }
-    .footSocList li a i {
-      width: 58px;
-      height: 58px;
-      background-color: #505050;
-      -webkit-border-radius: 50%;
-      border-radius: 50%;
-      padding: 24px 24px 0 0;
-      display: inline-block;
-      margin-right: 10px;
-      margin-left: 10px;
-      background-repeat: no-repeat; }
-    .footSocList li a i.vk {
-      background-image: url("../img/vk.png");
-      background-position: center; }
-    .footSocList li a i.t {
-      background-image: url("../img/t.png");
-      background-position: center; }
-    .footSocList li a i.fb {
-      background-image: url("../img/fb.png");
-      background-position: center; }
+  .footSoc .footSocList {
+    display: block;
+    color: #fff;
+    list-style: none;
+    vertical-align: top;
+    margin: 15px auto;
+    padding: 0; }
+    .footSoc .footSocList li {
+      display: inline-block; }
+      .footSoc .footSocList li a i {
+        width: 58px;
+        height: 58px;
+        background-color: #505050;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        padding: 24px 24px 0 0;
+        display: inline-block;
+        margin-right: 10px;
+        margin-left: 10px;
+        background-repeat: no-repeat; }
+      .footSoc .footSocList li a i.vk {
+        background-image: url("../img/vk.png");
+        background-position: center; }
+      .footSoc .footSocList li a i.t {
+        background-image: url("../img/t.png");
+        background-position: center; }
+      .footSoc .footSocList li a i.fb {
+        background-image: url("../img/fb.png");
+        background-position: center; }
 
 .modal-dialog {
   width: 563px;
@@ -927,5 +939,8 @@ footer {
 
 .content-area {
   padding: 50px 0; }
+
+.flip {
+  right: 0; }
 
 /*# sourceMappingURL=style.css.map */

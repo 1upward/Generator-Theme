@@ -70,7 +70,7 @@
 				<li><a href="#blogL" class="lastA smoothScroll">Блог</a></li>
 			</ul>
 		</div>
-	
+	</nav>
 	<section class="sliderLine">
 		
 		<!-- -------------------ПРОБНЫЙ-------------------- -->
@@ -252,6 +252,7 @@
 		<div class="container">
 			<h1 class="blockTitle">Примеры работ: </h1>
 			<div class="row">
+				<div class="jobsPad">
 			<!-- --------------Выгруска работ-------------- -->
 			<!--<a href="#nowhere" class="jobItem">
 				<span class="jobImg">
@@ -285,7 +286,7 @@
 			</a>-->
                 <?php echo do_shortcode("[work]");?>
 
-
+			</div>
 			<!-- --------------Выгруска работ-------------- -->
 			</div>
 			<div class="row">
@@ -301,7 +302,7 @@
 				<div class="figureImg">
 					<img src="<?php bloginfo('template_directory'); ?>/img/figure1.png" alt="">
 				</div>
-				<h3>40 специалистов в штате</h3>
+				<h3>40 специалистов <br>в штате</h3>
 			</div>
 			<div class="figuresBlock">
 				<div class="figureImg">
@@ -334,6 +335,7 @@
 			<div class="oneTeamBlock">
 				<h1 class="blockTitle">Одна из команд проекта:</h1>
 				<div class="row">
+					<div class="allTeam">
 					<div class="row">
 						<div class="teamLine">
 							<div class="teamMember">
@@ -417,7 +419,8 @@
 								<p>Аккаунт менеджер</p>
 							</div>
 						</div>
-					</div>					
+					</div>	
+					</div>				
 				</div>
 				<div class="row">
 					<a data-toggle="modal" href="#request" class="jobsPortfolio">Запросить портфолио</a>
@@ -429,23 +432,23 @@
     <?php echo do_shortcode("[reviews]");?>
     <?php echo do_shortcode("[news]");?>
     <?php echo do_shortcode("[blog]");?>
+
    	<footer>
-   		<div class="topLine">
-			
-				<div class="topLine-left">				
-					<p>Наши проекты:</p>
-					<a href="http://promo.itpanda.ru">promo.itpanda.ru</a>
-					<a href="http://shop.itpanda.ru">shop.itpanda.ru</a>
-				</div>
-				<div class="topLine-right">
-					<ul>
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">Вакансии</a></li>
-						<li><a href="#">Генератор продаж</a></li>
-					</ul>
-				</div>
-			
+   		<div class="topLine">			
+			<div class="topLine-left">				
+				<p>Наши проекты:</p>
+				<a href="http://promo.itpanda.ru">promo.itpanda.ru</a>
+				<a href="http://shop.itpanda.ru">shop.itpanda.ru</a>
+			</div>
+			<div class="topLine-right">
+				<ul>
+					<li><a href="#">Новости</a></li>
+					<li><a href="#">Вакансии</a></li>
+					<li><a href="#">Генератор продаж</a></li>
+				</ul>
+			</div>			
 		</div>
+
 		<div class="footerContent">
 			<div class="footContacts">
 				<h3>© «IT PANDA», 2012-2015</h3>
@@ -481,7 +484,8 @@
 	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
 	            <h1>Запросить коммерческое предложение</h1>            
 	            <p>При заказе сайта до 14 июня 3000 рублей 
-	            	в подарок на дополнительный функционал! До конца акции осталось:</p>
+	            	в подарок на дополнительный функционал! До конца акции осталось:</p>	
+	            	<div class="clock" style="margin:.1em;"></div>            	
 	            <?php echo do_shortcode("[contact-form-7 id='135' title='GeneratorRequest']"); ?>
 	        </div>       
 	    </div>
