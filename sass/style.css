@@ -753,7 +753,8 @@ html {
 
 footer {
   background: #3f3f3f;
-  display: block; }
+  display: block;
+  min-width: 1336px; }
   footer .topLine {
     padding-left: 115px;
     padding-right: 154px;
@@ -954,8 +955,5 @@ footer {
 
 .flip {
   right: 0; }
-
-.admin_reveiws td {
-  text-align: left; }
 
 /*# sourceMappingURL=style.css.map */
