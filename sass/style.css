@@ -105,16 +105,23 @@ html {
     outline: none; }
 
 .headerPhone {
-  padding: 0 20px;
+  padding: 0 0 0 46px;
+  position: relative;
+  right: -10px;
   color: #5f5f5f;
   font-size: 24px;
   font-weight: bold;
   display: table-cell;
-  vertical-align: middle; }
+  vertical-align: middle;
+  position: relative;
+  right: -9px;
+  left: 9px; }
 
 .headerButton {
   display: table-cell;
-  vertical-align: middle; }
+  vertical-align: middle;
+  position: relative;
+  right: -35px; }
   .headerButton a {
     display: block;
     width: 224px;
@@ -753,8 +760,7 @@ html {
 
 footer {
   background: #3f3f3f;
-  display: block;
-  min-width: 1336px; }
+  display: block; }
   footer .topLine {
     padding-left: 115px;
     padding-right: 154px;
