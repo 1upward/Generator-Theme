@@ -32,9 +32,9 @@
 		</div>
 		<div class="container">
 			<div class="header">			
-				<div class="logo">
+				<a href="#nowhere" class="logo"><span>
 					Генератор
-				</div>
+				</span></a>
 				<div class="slogan">
 					Решаем все задачи по созданию <br> и развитию сайтов в <!-- Екатеринбурге -->  
 					<div class="btn-group">
@@ -148,7 +148,7 @@
 			<a href="#" class="singleProduct">
 				<img src="<?php bloginfo('template_directory'); ?>/img/p2.png" alt="placeholder+image">
 				<span class="productTrans">
-					<h3>Сайт компании под ключ или интернет-магазин</h3>					
+					<h3>Клиенты из социальных сетей под ключ</h3>					
 					<p>От вас информация о себе и задачи, от нас клиенты из социальных сетей.</p>
 					<span class="productPrice">
 					<b>от 10 000 Руб.</b><br>
@@ -159,7 +159,7 @@
 			<a href="#" class="singleProduct">
 				<img src="<?php bloginfo('template_directory'); ?>/img/p3.png" alt="placeholder+image">
 				<span class="productTrans">
-					<h3>Сайт компании под ключ или интернет-магазин</h3>					
+					<h3>Повышение продаж существующих сайтов</h3>					
 					<p>Все работы по сайту берем на себя. Превращаем затраты в инвестиции. </p>
 					<span class="productPrice">
 						<b>от 50 000 Руб.</b><br>
