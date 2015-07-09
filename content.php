@@ -1,11 +1,10 @@
 <!-- Post Start -->
 <article class="is-post is-post-excerpt" class="<?php post_class(); ?>" id="post-<?php the_ID(); ?>">
-    <header>
-        <h2 class="entry-title"><a title="<?php printf( esc_attr__( 'Permalink to %s', 'striped' ), the_title_attribute( 'echo=0' ) ); ?>" href="<?php the_permalink(); ?>" rel="bookmark">
-                <?php the_title(); ?>
-            </a></h2>
+
+        <h2 class="entry-title">           <?php the_title(); ?>
+            </h2>
         <!-- <span class="byline">A free, fully responsive HTML5 site template by HTML5 UP</span> -->
-    </header>
+  
     <div class="info">
 			<span class="date">
 			<span class="day"><?php the_time('j'); ?></span>
@@ -16,9 +15,11 @@
 			</span>
 
     </div>
-    <a href="<?php the_permalink(); ?>" class="image image-full"><?php if ( has_post_thumbnail() ) {
+    <!-- <a href="<?php the_permalink(); ?>" class="image image-full"> --><?php if ( has_post_thumbnail() ) {
             the_post_thumbnail();
-        }  ?></a>
+        }  ?><!-- </a> -->
+        <div class="theContent">
     <?php the_content(); ?>
+    </div>
 </article>
 <!-- Post End -->

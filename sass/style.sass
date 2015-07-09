@@ -99,6 +99,7 @@ html
 		font-weight: 100
 		font-size: 15px
 		padding-bottom: 3px 
+		font-weight: 700 
 		&:hover, &:active, &:focus
 			outline: none 
 
@@ -136,10 +137,18 @@ html
 		font-weight: bold
 		text-align: center
 		line-height: 49px 
-		outline: none		
+		outline: none	
+		-moz-transition: all 0.3s linear
+		-o-transition: all 0.3s linear
+		-webkit-transition: all 0.3s linear
 	a:hover, &:focus, &:active
 		text-decoration: none
-		color: #FFF 
+		color: #FFF
+	a:hover
+		opacity: 0.8
+		
+
+ 
 .navMeny
 	background: #3f3f3f
 	height: 49px
@@ -308,10 +317,13 @@ html
 	display: block
 	margin: 0 auto
 	line-height: 63px 
-
+	-moz-transition: all 0.3s linear
+	-o-transition: all 0.3s linear
+	-webkit-transition: all 0.3s linear
 	&:hover, &:focus, &:active
 		text-decoration: none
 		color: #ffffff
+		opacity: 0.8 
 
 .productItems
 	display: block
@@ -362,9 +374,13 @@ html
 	text-decoration: none
 	display: inline-block
 	text-align: center
+	-moz-transition: all 0.3s linear
+	-o-transition: all 0.3s linear
+	-webkit-transition: all 0.3s linear
 	&:hover, &:focus, &:active
 		color: #FFF 
 		text-decoration: none
+		opacity: 0.8 
 .servTransTop
 	@extend .servTrans
 	padding-bottom: 10px
@@ -398,6 +414,9 @@ html
 	display: block
 	margin: 0 auto
 	line-height: 35px
+	-moz-transition: all 0.3s linear
+	-o-transition: all 0.3s linear
+	-webkit-transition: all 0.3s linear
 	&:hover, &:focus, &:active
 		text-decoration: none
 .jobs
@@ -443,9 +462,13 @@ html
 	display: block
 	margin: 0 auto
 	line-height: 63px
+	-moz-transition: all 0.3s linear
+	-o-transition: all 0.3s linear
+	-webkit-transition: all 0.3s linear
 	&:hover, &:focus, &:active
 		text-decoration: none
-		color: #FFF 
+		color: #FFF
+		opacity: 0.8  
 .news
 	display: block
 	padding-top: 75px
@@ -636,11 +659,14 @@ html
 	color: #fff
 	font-size: 18px
 	font-weight: bold
-
+	-moz-transition: all 0.3s linear
+	-o-transition: all 0.3s linear
+	-webkit-transition: all 0.3s linear
 	&:hover, &:focus, &:active
 		text-decoration: none
 		color: #FFF 
 		outline: none
+		opacity: 0.8
 .reviews_wr
 	display: block
 	background: #e9f0f2 
@@ -706,6 +732,11 @@ html
 	background-repeat: no-repeat   
 	display: block
 	margin: 30px auto 0
+	-moz-transition: all 0.3s linear
+	-o-transition: all 0.3s linear
+	-webkit-transition: all 0.3s linear
+	&:hover
+		opacity: 0.8 
 footer
 	min-width: 1106px 
 	background: #3f3f3f	
@@ -786,10 +817,14 @@ footer
 			font-weight: bold
 			text-align: center
 			margin-top: 50px
+			-moz-transition: all 0.3s linear
+			-o-transition: all 0.3s linear
+			-webkit-transition: all 0.3s linear
 			&:hover, &:focus, &:active
 				text-decoration: none
 				color: #FFF 
 				outline: none
+				opacity: 0.8
 		p
 			color: #959595
 			font-size: 16px
@@ -909,6 +944,8 @@ footer
 	display: flex
 .content-area
 	padding: 50px 0	
+	min-height: 80%
+	display: block
 .flip
 	right: 0
 	
@@ -922,3 +959,15 @@ span.wpcf7-not-valid-tip
 	display: block
 div.wpcf7-validation-errors
 	border: none
+.info
+	span.date
+		display: block
+		margin: 15px 0
+	p
+		padding-top: 25px
+		display: block
+.theContent
+	display: block
+	padding: 25px 0
+.is-post
+	min-height: 538px
