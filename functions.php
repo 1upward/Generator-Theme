@@ -113,9 +113,9 @@ function gen_theme_admin_page(){
 function print_work(){
     $parser = new Parser_generator_theme();
     $gen =new gen_theme();
-    $res = $gen->get_work();
+    $res = $gen->get_work();   
     foreach ($res as $v) {
-             $parser->parse(GENERATOR_THEME_DIR."/view/work_box_view.php",array('images' => $v->images,'name' => $v->name,'link' => $v->link,'id' => $v->id_work), true);
+        $parser->parse(GENERATOR_THEME_DIR."/view/work_box_view.php",array('images' => $v->images,'name' => $v->name,'link' => $v->link,'id' => $v->id_work), true);           
     }
 }
 
