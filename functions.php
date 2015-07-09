@@ -224,10 +224,11 @@ add_shortcode('work','work_home_short');
 function reviews_home_short(){
     $parser = new Parser_generator_theme();
     $gen =new gen_theme();
-    $res = $gen->get_reviews_one();
-     $kol = $gen->get_all_reviews();
+   // $res = $gen->get_reviews_one();
+    $res = $gen->get_reviews();
+    $kol = $gen->get_all_reviews();
     $ending = get_ending($kol);
-   // prn($res[0]->text_reviews);
+    prn($res);
     $parser->parse(GENERATOR_THEME_DIR."/view/reviews/reviews_block_view.php",array('text' => $res[0]->text_reviews,'fio' => $res[0]->fio,'name' => $res[0]->name,'link' => $res[0]->link,'kol_reviews' =>$kol,'ending' => $ending), true);
 
 }
