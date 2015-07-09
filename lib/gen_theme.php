@@ -11,7 +11,7 @@ class gen_theme {
 
     function get_work(){
         global $wpdb;
-        $res = $wpdb->get_results("SELECT * FROM work");
+        $res = $wpdb->get_results("SELECT * FROM work ORDER BY id_work DESC");
         return $res;
     }
 

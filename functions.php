@@ -228,7 +228,6 @@ function reviews_home_short(){
     $res = $gen->get_reviews();
     $kol = $gen->get_all_reviews();
     $ending = get_ending($kol);
-    prn($res);
     $parser->parse(GENERATOR_THEME_DIR."/view/reviews/reviews_block_view.php",array('text' => $res[0]->text_reviews,'fio' => $res[0]->fio,'name' => $res[0]->name,'link' => $res[0]->link,'kol_reviews' =>$kol,'ending' => $ending), true);
 
 }
