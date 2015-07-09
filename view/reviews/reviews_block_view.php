@@ -19,8 +19,11 @@
                 <div class = "linkreviews">
                    <a href = "{link}"> {link}</a>
                 </div>
-                <a href="#nowhere" class="circArrow"></a>
+                <a href="#" class="circArrow" onclick="return false;" ></a>
+
             </div>
         </div>
     </div>
+    <div id = "count_rev" data-count-review="{count-rev}"></div>
+    <div id = "col_rev" data-col-revievs = "{kol_reviews}"></div>
 </section>

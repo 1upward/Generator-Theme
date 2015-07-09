@@ -21,7 +21,15 @@ function add_script(){
     wp_enqueue_script( 'fotorama-js', get_template_directory_uri() . '/js/fotorama.js', array(), '1');
     wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/script.js', array(), '1');
     wp_enqueue_script( 'flipclock_js', get_template_directory_uri() . '/js/flipclock.js', array(), '1');
+    wp_enqueue_script( 'reviews', get_template_directory_uri() . '/js/reviews.js', array(), '1');
+    wp_localize_script( 'jquery', 'myajax',
+        array(
+            'url' => admin_url('admin-ajax.php')
+        ));
 }
+
+add_action('wp_ajax_get_reviews', 'get_reviews_function');
+add_action('wp_ajax_nopriv_get_reviews', 'get_reviews_function');
 
 add_action( 'wp_enqueue_scripts', 'add_style' );
 add_action( 'wp_enqueue_scripts', 'add_script' );
@@ -32,7 +40,21 @@ function prn($content) {
     echo '</pre>';
 }
 
+function get_reviews_function(){
+    if($_POST['last']=='y'){
+        $count = 0;
+    }
+    else{
+        $count = $_POST['coun-rev']+1;
+    }
 
+    $parser = new Parser_generator_theme();
+    $gen =new gen_theme();
+    $res = $gen->get_reviews();
+
+    echo $parser->parse(GENERATOR_THEME_DIR."/view/reviews/reviews_box_view.php",array('text' => $res[$count]->text_reviews,'fio' => $res[$count]->fio,'name' => $res[$count]->name,'link' => $res[$count]->link,'count-rev'=>$count), true);
+    die();
+}
 /*----------ADMIN--------------*/
 
 
@@ -228,7 +250,9 @@ function reviews_home_short(){
     $res = $gen->get_reviews();
     $kol = $gen->get_all_reviews();
     $ending = get_ending($kol);
-    $parser->parse(GENERATOR_THEME_DIR."/view/reviews/reviews_block_view.php",array('text' => $res[0]->text_reviews,'fio' => $res[0]->fio,'name' => $res[0]->name,'link' => $res[0]->link,'kol_reviews' =>$kol,'ending' => $ending), true);
+
+ // prn($res);
+    $parser->parse(GENERATOR_THEME_DIR."/view/reviews/reviews_block_view.php",array('text' => $res[0]->text_reviews,'fio' => $res[0]->fio,'name' => $res[0]->name,'link' => $res[0]->link,'kol_reviews' =>$kol,'ending' => $ending, 'count-rev'=>0), true);
 
 }
 add_shortcode('reviews','reviews_home_short');
