@@ -17,7 +17,7 @@ html
 
 .topLine
 	background-color: #e9eff2
-	padding: 7px 0 10px	
+	padding: 7px 0 10px		
 .topLine-left
 	display: inline-block
 	width: 55%
@@ -488,8 +488,6 @@ html
 .data
 	color: #a5a5a5
 	font-size: 15px
-	/* font-weight: 800 
-	font-family: 'Open Sans Condensed', sans-serif */
 .title_news
 	color: #4f4f4f
 	font-size: 14px		
@@ -709,16 +707,19 @@ html
 	display: block
 	margin: 30px auto 0
 footer
+	min-width: 1106px 
 	background: #3f3f3f	
 	display: block
-	.topLine
-		padding-left: 115px
-		padding-right: 154px
+	.topLineBorder
+		border-bottom: 1px solid #333
+	.topLine		
 		padding-top: 14px
 		background-color: #FFF		
-		border-bottom: 1px solid #333
 		background-color: #3f3f3f
 		display: flex
+		min-width: 1106px
+		width: 1106px
+		margin: 0 auto
 		.topLine-left
 			a				
 				background: url("../img/a-linkW.png") no-repeat top right
@@ -731,8 +732,11 @@ footer
 					a:hover
 						color: #2ba7d9
 .footerContent
-	padding: 15px 115px
+	/* padding: 15px 115px */
 	display: flex
+	width: 1106px
+	min-width: 1106px
+	margin: 0 auto
 	line-height: 18px
 .footContacts
 	display: block

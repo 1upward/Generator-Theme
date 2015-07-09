@@ -523,9 +523,7 @@ html {
 
 .data {
   color: #a5a5a5;
-  font-size: 15px;
-  font-weight: 800;
-  font-family: "Open Sans Condensed", sans-serif; }
+  font-size: 15px; }
 
 .title_news {
   color: #4f4f4f;
@@ -768,16 +766,19 @@ html {
   margin: 30px auto 0; }
 
 footer {
+  min-width: 1106px;
   background: #3f3f3f;
   display: block; }
+  footer .topLineBorder {
+    border-bottom: 1px solid #333; }
   footer .topLine {
-    padding-left: 115px;
-    padding-right: 154px;
     padding-top: 14px;
     background-color: #FFF;
-    border-bottom: 1px solid #333;
     background-color: #3f3f3f;
-    display: flex; }
+    display: flex;
+    min-width: 1106px;
+    width: 1106px;
+    margin: 0 auto; }
     footer .topLine .topLine-left a {
       background: url("../img/a-linkW.png") no-repeat top right;
       color: #ffffff; }
@@ -787,8 +788,11 @@ footer {
       color: #2ba7d9; }
 
 .footerContent {
-  padding: 15px 115px;
+  /* padding: 15px 115px */
   display: flex;
+  width: 1106px;
+  min-width: 1106px;
+  margin: 0 auto;
   line-height: 18px; }
 
 .footContacts {
