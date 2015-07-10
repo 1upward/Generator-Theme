@@ -32,9 +32,9 @@
 		</div>
 		<div class="container">
 			<div class="header">			
-				<div class="logo">
+				<a href="<?php echo get_home_url(); ?>" class="logo"><span>
 					Генератор
-				</div>
+				</span></a>
 				<div class="slogan">
 					Решаем все задачи по созданию <br> и развитию сайтов в <!-- Екатеринбурге -->  
 					<div class="btn-group">

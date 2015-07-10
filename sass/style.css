@@ -798,7 +798,8 @@ html {
 footer {
   min-width: 1106px;
   background: #3f3f3f;
-  display: block; }
+  display: block;
+  padding-bottom: 10px; }
   footer .topLineBorder {
     border-bottom: 1px solid #333; }
   footer .topLine {
@@ -916,7 +917,12 @@ footer {
         display: inline-block;
         margin-right: 10px;
         margin-left: 10px;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear; }
+        .footSoc .footSocList li a i:hover {
+          opacity: 0.5; }
       .footSoc .footSocList li a i.vk {
         background-image: url("../img/vk.png");
         background-position: center; }

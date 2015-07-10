@@ -32,7 +32,7 @@
 		</div>
 		<div class="container">
 			<div class="header">			
-				<a href="#nowhere" class="logo"><span>
+				<a href="<?php echo get_home_url(); ?>" class="logo"><span>
 					Генератор
 				</span></a>
 				<div class="slogan">
