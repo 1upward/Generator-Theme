@@ -1055,6 +1055,9 @@ div.wpcf7-validation-errors {
     width: 41%; }
 
   .headerPhone {
-    padding-left: 25px; } }
+    padding-left: 25px; }
+
+  .topLine-left {
+    padding-left: 10px; } }
 
 /*# sourceMappingURL=style.css.map */
