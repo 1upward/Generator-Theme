@@ -1044,4 +1044,17 @@ div.wpcf7-validation-errors {
 .is-post {
   min-height: 538px; }
 
+@media only screen and (max-width: 1105px) {
+  .footerContent {
+    padding: 0 0 0 10px; }
+
+  .footSoc {
+    width: 25%; }
+
+  .topLine-right {
+    width: 41%; }
+
+  .headerPhone {
+    padding-left: 25px; } }
+
 /*# sourceMappingURL=style.css.map */
