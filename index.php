@@ -58,71 +58,27 @@
 			</div>
 		</div>		
 	</header>
+
 	<nav class="navMeny">
 		<div class="container">
-			<ul>
-				<li><a href="#forKey" class="smoothScroll">Продукты под ключ</a></li>
-				<li><a href="#nowhere" class="smoothScroll"> Недорогие решения</a></li>
-				<li><a href="#serv" class="smoothScroll"> Услуги </a></li>
-				<li><a href="#port" class="smoothScroll">Портфолио</a></li>
-				<li><a href="#about" class="smoothScroll">О компании</a></li>
-				<li><a href="#nowhere" class="smoothScroll">Контакты</a></li>
-				<li><a href="#blogL" class="lastA smoothScroll">Блог</a></li>
-			</ul>
+            <?php wp_nav_menu( array('main-menu' => 'Меню в шапке','container'=> '',
+                'items_wrap'=>'<ul>%3$s</ul>')); ?>
+<!--			<ul>-->
+<!--				<li><a href="#forKey" class="smoothScroll">Продукты под ключ</a></li>-->
+<!--				<li><a href="#nowhere" class="smoothScroll"> Недорогие решения</a></li>-->
+<!--				<li><a href="#serv" class="smoothScroll"> Услуги </a></li>-->
+<!--				<li><a href="#port" class="smoothScroll">Портфолио</a></li>-->
+<!--				<li><a href="#about" class="smoothScroll">О компании</a></li>-->
+<!--				<li><a href="#nowhere" class="smoothScroll">Контакты</a></li>-->
+<!--				<li><a href="#blogL" class="lastA smoothScroll">Блог</a></li>-->
+<!--			</ul>-->
 		</div>
 	</nav>
 	<section class="sliderLine">
-		
 		<!-- -------------------ПРОБНЫЙ-------------------- -->
-		 <div id="myCarousel" class="carousel slide" data-interval="500" data-ride="carousel">
-                <!-- Индикаторы для карусели -->
-                <ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-					<li data-target="#myCarousel" data-slide-to="3"></li>
-				</ol>
-                <!-- Слайды карусели -->
-                <div class="carousel-inner">
-                    <!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
-                    <div class="active item">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/slide2.jpg" alt="Carousel Item Title">
-                        <div class="onSlideText">
-							<h1>Выполнение проектов под ключ</h1>
-				    		<p>С гарантией результата</p>
-				    		<a href="#">Узнать подробнее</a>
-				    	</div>
-                    </div>
-                    <!-- Слайд №2 -->
-                    <div class="item">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/slide1.jpg" alt="Carousel Item Title">
-                        <div class="onSlideText">
-							<h1>Выполнение проектов под ключ</h1>
-				    		<p>С гарантией результата</p>
-				    		<a href="#">Узнать подробнее</a>
-				    	</div>
-                    </div>
-                    <!-- Слайд №3 -->
-                    <div class="item">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/slide2.jpg" alt="Carousel Item Title">
-                        <div class="onSlideText">
-							<h1>Выполнение проектов под ключ</h1>
-				    		<p>С гарантией результата</p>
-				    		<a href="#">Узнать подробнее</a>
-				    	</div>
-                    </div>
-                    <!-- Слайд №4 -->
-                    <div class="item">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/slide4.jpg" alt="Carousel Item Title">
-                        <div class="onSlideText">
-							<h1>Выполнение проектов под ключ</h1>
-				    		<p>С гарантией результата</p>
-				    		<a href="#">Узнать подробнее</a>
-				    	</div>
-                    </div>
-                </div>
-               
-            </div>
+
+             <?php echo do_shortcode('[headSlides]')?>
+
 		<!-- -------------------ПРОБНЫЙ-------------------- -->
 	</section>
 

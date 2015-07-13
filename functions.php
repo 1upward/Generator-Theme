@@ -40,6 +40,15 @@ function prn($content) {
     echo '</pre>';
 }
 
+register_nav_menus( array(
+    'main-menu' => 'Меню в шапке'
+) );
+
+function add_menuclass($ulclass) {
+    return preg_replace('/<a /', '<a class="smoothScroll"', $ulclass, -1);
+}
+add_filter('wp_nav_menu','add_menuclass');
+
 function get_reviews_function(){
     if($_POST['last']=='y'){
         $count = 0;
@@ -61,6 +70,7 @@ function get_reviews_function(){
 function gen_menu_page(){
     add_menu_page( 'Добавить работу', 'Добавить работу', 'administrator', 'gen_theme', 'gen_theme_admin_page' );
     add_menu_page( 'Добавить отзыв', 'Добавить отзыв', 'administrator', 'gen_reviews', 'gen_reviews_admin_page' );
+    add_menu_page( 'Слайдер', 'Настройки слайдера', 'administrator', 'slides', 'genSlidesAdminPage' );
 }
 add_action('admin_menu', 'gen_menu_page');
 
@@ -141,18 +151,87 @@ function print_work(){
     }
 }
 
+function genSlidesAdminPage(){
+    global $wpdb;
+    $message = '';
+    $parser = new Parser_generator_theme();
+
+    if (function_exists('wp_enqueue_media')) {
+        wp_enqueue_media();
+    } else {
+        wp_enqueue_style('thickbox');
+        wp_enqueue_script('media-upload');
+        wp_enqueue_script('thickbox');
+    }
+
+    if(isset($_GET['delSlide'])){
+        $wpdb->delete('head_slider',array("id" => $_GET['delSlide']));
+        $message = "Фото успешно удалено!";
+    }
+
+    if(isset($_POST['attachment_url'])){
+        $wpdb->insert('head_slider', array("img" => $_POST['attachment_url'],
+            "title" => $_POST['title'],"descr" => $_POST['descr']));
+        $message = "Слайд успешно добавлен!";
+        echo mysql_error();
+    }
+
+    $generate = '';
+
+    $slides = $wpdb->get_results("SELECT * FROM head_slider");
+    foreach ($slides as $slide) {
+        $generate .= "<tr>
+                        <td style='padding-right: 10px'><img src='". $slide->img. "' alt='' style='width: 50px;'/></td>
+                        <td style='padding-right: 10px'><p>".$slide->title."</p></td>
+                        <td style='padding-right: 10px'><p>".$slide->descr."</p></td>
+                        <td style='padding-right: 10px'><a href='/wp-admin/admin.php?page=slides&delSlide=$slide->id'>Удалить</a></td>
+                      </tr>";
+    }
+
+    $parser->parse(GENERATOR_THEME_DIR."/view/admin/headSlider.php",array('slides'=>$generate,
+        'message'=>$message), true);
+}
+
+function slidesShortcode(){
+    global $wpdb;
+
+    $generate = "<div class='carousel-inner'>";
+    $indicators = "<ol class='carousel-indicators'>";
+    $iterator = 0;
+
+    $slides = $wpdb->get_results("SELECT * FROM head_slider");
+
+    foreach ($slides as $key => $slide) {
+        if($key==0){
+            $indicators .= "<li data-target='#myCarousel' data-slide-to='".$iterator."' class='active'></li>";
+            $generate.= "<div class='item active'>";
+        }else{
+            $indicators .= "<li data-target='#myCarousel' data-slide-to='".$iterator."' ></li>";
+            $generate.= "<div class='item'>";
+        }
+
+        $generate.= "<img src='".$slide->img."' alt='Carousel Item Title'>
+                        <div class='onSlideText'>
+    							<h1>".$slide->title."</h1>
+    				    		<p>".$slide->descr."</p>
+    				    		<a href='#'>Узнать подробнее</a>
+    				    	</div>
+                    </div>";
+        $iterator++;
+    }
+    $indicators .= "</ol>";
+    $generate .= "</diV>";
+
+    return "<div id='myCarousel' class='carousel slide' data-interval='500' data-ride='carousel'>".$indicators.$generate."</div>";
+}
+add_shortcode('headSlides', 'slidesShortcode');
+
 // load script to admin
 function admin_js() {
     $url = get_template_directory_uri()  . '/js/admin.js';
     echo "<script type='text/javascript' src='$url'></script>";
-
 }
 add_action('admin_head', 'admin_js');
-
-
-
-
-
 
 /*------------END ADMIN--------------*/
 function my_pagenavi() {
