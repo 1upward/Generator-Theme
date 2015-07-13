@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -13,56 +13,33 @@
 </head>
 
 <body>
-	<header>
-		<div class="topLine">
-			<div class="container">
-				<div class="topLine-left">				
-					<p>Наши проекты:</p>
-					<a href="http://promo.itpanda.ru">promo.itpanda.ru</a>
-					<a href="http://shop.itpanda.ru">shop.itpanda.ru</a>
-				</div>
-				<div class="topLine-right">
-					<ul>
-						<li><a href="#nowhere">Новости</a></li>
-						<li><a href="#nowhere">Вакансии</a></li>
-						<li><a href="#nowhere">Генератор продаж</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="container">
-			<div class="header">			
-				<a href="<?php echo get_home_url(); ?>" class="logo"><span>
-					Генератор
-				</span></a>
-				<div class="slogan">
-					Решаем все задачи по созданию <br> и развитию сайтов в <!-- Екатеринбурге -->  
-					<div class="btn-group">
-						
-						<select name="city" id="myselect">
-							<option id="ecater" value="+7 (343) 226-01-36" selected>Екатеринбурге </option>
-							<option id="chel" value="+7 (351) 216-03-24">Челябинск</option>
-							<option id="mosc" value="+7 (499) 704-62-76">Москва </option>
-							<option id="tyumen" value="+7 (3452) 23-83-14">Тюмень </option>
-							<option id="allRus" value="&nbsp 8 (800) 333-69-90">Вся Россия </option>							
-							<span class="caret"></span>
-						</select>
-					</div>
-				</div>
-				<div class="headerPhone" id="mydiv">
-					+7 (343) 226-01-36
-				</div>
-				<div class="headerButton">
-					<a data-toggle="modal" href="#request">Оставить заявку</a>
-				</div>
-			</div>
-		</div>		
-	</header>
 
-	<nav class="navMeny">
-		<div class="container">
-            <?php wp_nav_menu( array('main-menu' => 'Меню в шапке','container'=> '',
-                'items_wrap'=>'<ul>%3$s</ul>')); ?>
+﻿<? get_header(); ?>
+<nav class="navMeny">
+    <div class="container">
+        <?php wp_nav_menu( array('main-menu' => 'Меню в шапке','container'=> '',
+            'items_wrap'=>'<ul>%3$s</ul>')); ?>
+        <!--			<ul>-->
+        <!--				<li><a href="#forKey" class="smoothScroll">Продукты под ключ</a></li>-->
+        <!--				<li><a href="#nowhere" class="smoothScroll"> Недорогие решения</a></li>-->
+        <!--				<li><a href="#serv" class="smoothScroll"> Услуги </a></li>-->
+        <!--				<li><a href="#port" class="smoothScroll">Портфолио</a></li>-->
+        <!--				<li><a href="#about" class="smoothScroll">О компании</a></li>-->
+        <!--				<li><a href="#nowhere" class="smoothScroll">Контакты</a></li>-->
+        <!--				<li><a href="#blogL" class="lastA smoothScroll">Блог</a></li>-->
+        <!--			</ul>-->
+    </div>
+</nav>
+<section class="sliderLine">
+    <!-- -------------------ПРОБНЫЙ-------------------- -->
+
+    <?php echo do_shortcode('[headSlides]')?>
+
+    <!-- -------------------ПРОБНЫЙ-------------------- -->
+</section>
+
+<!--	<nav class="navMeny">-->
+<!--		<div class="container">-->
 <!--			<ul>-->
 <!--				<li><a href="#forKey" class="smoothScroll">Продукты под ключ</a></li>-->
 <!--				<li><a href="#nowhere" class="smoothScroll"> Недорогие решения</a></li>-->
@@ -70,17 +47,63 @@
 <!--				<li><a href="#port" class="smoothScroll">Портфолио</a></li>-->
 <!--				<li><a href="#about" class="smoothScroll">О компании</a></li>-->
 <!--				<li><a href="#nowhere" class="smoothScroll">Контакты</a></li>-->
-<!--				<li><a href="#blogL" class="lastA smoothScroll">Блог</a></li>-->
+<!--				<li><a href="#blogL" class="smoothScroll">Блог</a></li>-->
 <!--			</ul>-->
-		</div>
-	</nav>
-	<section class="sliderLine">
-		<!-- -------------------ПРОБНЫЙ-------------------- -->
-
-             <?php echo do_shortcode('[headSlides]')?>
-
-		<!-- -------------------ПРОБНЫЙ-------------------- -->
-	</section>
+<!--		</div>-->
+<!--	</nav>-->
+<!--	<section class="sliderLine">-->
+<!--		<div id="myCarousel" class="carousel slide" data-interval="500" data-ride="carousel">-->
+<!--		    <!-- Индикаторы для карусели -->-->
+<!--		    <ol class="carousel-indicators">-->
+<!--				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+<!--				<li data-target="#myCarousel" data-slide-to="1"></li>-->
+<!--				<li data-target="#myCarousel" data-slide-to="2"></li>-->
+<!--				<li data-target="#myCarousel" data-slide-to="3"></li>-->
+<!--			</ol>-->
+<!--		    <!-- Слайды карусели -->-->
+<!--		    <div class="carousel-inner">-->
+<!--		        <!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->-->
+<!--		        <div class="active item">-->
+<!--		            <img src="--><?php //bloginfo('template_directory'); ?><!--/img/slide2.jpg" alt="Carousel Item Title">-->
+<!--		            <div class="onSlideText">-->
+<!--						<h1>Выполнение проектов под ключ</h1>-->
+<!--			    		<p>С гарантией результата</p>-->
+<!--			    		<a href="#">Узнать подробнее</a>-->
+<!--			    	</div>-->
+<!--		        </div>-->
+<!--		        <!-- Слайд №2 -->-->
+<!--		        <div class="item">-->
+<!--		            <img src="--><?php //bloginfo('template_directory'); ?><!--/img/slide1.jpg" alt="Carousel Item Title">-->
+<!--		            <div class="onSlideText">-->
+<!--						<h1>Выполнение проектов под ключ</h1>-->
+<!--			    		<p>С гарантией результата</p>-->
+<!--			    		<a href="#">Узнать подробнее</a>-->
+<!--			    	</div>-->
+<!--		        </div>-->
+<!--		        <!-- Слайд №3 -->-->
+<!--		        <div class="item">-->
+<!--		            <img src="--><?php //bloginfo('template_directory'); ?><!--/img/slide2.jpg" alt="Carousel Item Title">-->
+<!--		            <div class="onSlideText">-->
+<!--						<h1>Выполнение проектов под ключ</h1>-->
+<!--			    		<p>С гарантией результата</p>-->
+<!--			    		<a href="#">Узнать подробнее</a>-->
+<!--			    	</div>-->
+<!--		        </div>-->
+<!--		        <!-- Слайд №4 -->-->
+<!--		        <div class="item">-->
+<!--		            <img src="--><?php //bloginfo('template_directory'); ?><!--/img/slide4.jpg" alt="Carousel Item Title">-->
+<!--		            <div class="onSlideText">-->
+<!--						<h1>Выполнение проектов под ключ</h1>-->
+<!--			    		<p>С гарантией результата</p>-->
+<!--			    		<a href="#">Узнать подробнее</a>-->
+<!--			    	</div>-->
+<!--		        </div>-->
+<!--		    </div>-->
+<!--		   -->
+<!--		</div>-->
+<!--		-->
+<!-->>>>>>> origin/master-->
+<!--	</section>-->
 
 	<section class="products">
 		<a id="forKey" name="forKey"></a>
@@ -389,67 +412,4 @@
     <?php echo do_shortcode("[news]");?>
     <?php echo do_shortcode("[blog]");?>
 
-   	<footer>
-   		<div class="topLineBorder">
-	   		<div class="topLine">		   					
-					<div class="topLine-left">				
-						<p>Наши проекты:</p>
-						<a href="http://promo.itpanda.ru">promo.itpanda.ru</a>
-						<a href="http://shop.itpanda.ru">shop.itpanda.ru</a>
-					</div>
-					<div class="topLine-right">
-						<ul>
-							<li><a href="#">Новости</a></li>
-							<li><a href="#">Вакансии</a></li>
-							<li><a href="#">Генератор продаж</a></li>
-						</ul>
-					</div>	
-					
-			</div>
-		</div>
-			<div class="footerContent">
-				<div class="footContacts">
-					<h3>© «IT PANDA», 2012-2015</h3>
-					<p>Екатеринбург	&nbsp +7 (343) 226-01-36</p>
-					<p>Челябинск &nbsp	+7 (351) 216-03-24</p>
-					<p>Москва &nbsp	+7 (499) 704-62-76</p>
-					<p>Тюмень	&nbsp +7 (3452) 23-83-14</p>
-					<p>Вся Россия &nbsp	8 (800) 333-6990</p>
-					<br>
-					<a href="#nowhere">Карта проезда</a><a href="mailto=sales@itpanda.ru">sales@itpanda.ru</a>
-				</div>
-				<div class="footSlogan">
-					<h3>Создание продающих сайтов в Екатеринбурге и по России</h3>
-					<h3>Продвижение сайтов в IT PANDA - itpanda-promo.ru</h3>
-					<div class="footSloganBut">
-						<a data-toggle="modal" href="#request">Запросить портфолио</a>
-						<p>Мы обязательно ответим</p>
-					</div>
-				</div>
-				<div class="footSoc">
-					<h3>Мы в соц.сетях</h3>
-					<ul class="footSocList">
-						<li><a href="#"><i class="t"></i></a></li>
-						<li><a href="#"><i class="fb"></i></a></li>		            
-			            <li><a href="#"><i class="vk"></i></a></li>		            
-	        		</ul>
-				</div>
-			
-		</div>
-   	</footer>
-
-   	<div class="modal fade" id="request" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	    <div class="modal-dialog">
-	        <div class="modal-header">
-	            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><!--&times;--></button>
-	            <h1>Запросить коммерческое предложение</h1>            
-	            <p>При заказе сайта до 14 июня 3000 рублей 
-	            	в подарок на дополнительный функционал! До конца акции осталось:</p>	
-	            	<div class="clock" style="margin:.1em;"></div>            	
-	            <?php echo do_shortcode("[contact-form-7 id='135' title='GeneratorRequest']"); ?>
-	        </div>       
-	    </div>
-	</div>
-<?php wp_footer(); ?>
-</body>
-</html>
+<? get_footer(); ?>

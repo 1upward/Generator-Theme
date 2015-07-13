@@ -390,3 +390,10 @@ function get_ending($count){
         }
 return $res;
 }
+
+add_action( 'admin_menu', 'xelly_remove_menu_items' );
+
+function xelly_remove_menu_items() {
+    // тут мы укахываем ярлык пункты который удаляем.
+    remove_menu_page( 'themes.php' );                 // Внешний вид // Удаляем пункт "Комментарии"
+}
