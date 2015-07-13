@@ -171,7 +171,9 @@ function genSlidesAdminPage(){
 
     if(isset($_POST['attachment_url'])){
         $wpdb->insert('head_slider', array("img" => $_POST['attachment_url'],
-            "title" => $_POST['title'],"descr" => $_POST['descr']));
+            "title" => $_POST['title'],
+            "descr" => $_POST['descr'],
+            "link" => $_POST['link']));
         $message = "Слайд успешно добавлен!";
         echo mysql_error();
     }
@@ -184,6 +186,7 @@ function genSlidesAdminPage(){
                         <td style='padding-right: 10px'><img src='". $slide->img. "' alt='' style='width: 50px;'/></td>
                         <td style='padding-right: 10px'><p>".$slide->title."</p></td>
                         <td style='padding-right: 10px'><p>".$slide->descr."</p></td>
+                        <td style='padding-right: 10px'><a href='".$slide->link."'>".$slide->link."</a></td>
                         <td style='padding-right: 10px'><a href='/wp-admin/admin.php?page=slides&delSlide=$slide->id'>Удалить</a></td>
                       </tr>";
     }
@@ -214,7 +217,7 @@ function slidesShortcode(){
                         <div class='onSlideText'>
     							<h1>".$slide->title."</h1>
     				    		<p>".$slide->descr."</p>
-    				    		<a href='#'>Узнать подробнее</a>
+    				    		<a href='".$slide->link."'>Узнать подробнее</a>
     				    	</div>
                     </div>";
         $iterator++;

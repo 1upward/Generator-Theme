@@ -11,6 +11,8 @@
                 <p><input type="text" name="title" value=""></p>
                 <p><b>Введите краткое описание слайда:</b><br>
                 <p><input type="text" name="descr" value=""></p>
+                <p><b>Укажите ссыдку слайда:</b><br>
+                <p><input type="text" name="link" value=""></p>
                 <p><b>Выберите фото:</b><br>
                 <p><img class="custom_media_image" src="" alt="" style="width: 80px;"></p>
                 <p><button class="custom_media_upload">Загрузить</button></p>
@@ -33,6 +35,9 @@
                     </td>
                     <td style="padding-right: 10px">
                         <p>Описание:</p>
+                    </td>
+                    <td style="padding-right: 10px">
+                        <p>Ссылка:</p>
                     </td>
                     <td>
                         <p>Удалить</p>
