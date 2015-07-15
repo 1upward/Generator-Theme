@@ -225,7 +225,7 @@ function slidesShortcode(){
     $indicators .= "</ol>";
     $generate .= "</diV>";
 
-    return "<div id='myCarousel' class='carousel slide' data-interval='500' data-ride='carousel'>".$indicators.$generate."</div>";
+    return "<div id='myCarousel' class='carousel slide' data-interval='5000' data-ride='carousel'>".$indicators.$generate."</div>";
 }
 add_shortcode('headSlides', 'slidesShortcode');
 
