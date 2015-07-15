@@ -47,7 +47,7 @@
  						</select>
  					</div>
 				</div>
-				<div class="headerPhone">
+				<div class="headerPhone" id="mydiv">
 					+7 (343) 226-01-36
 				</div>
 				<div class="headerButton">
