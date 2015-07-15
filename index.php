@@ -11,7 +11,7 @@
     <?php echo do_shortcode('[headSlides]') ?>
 
     <!-- -------------------ПРОБНЫЙ-------------------- -->
-</section>
+</section>+
 <section class="products">
     <a id="forKey" name="forKey"></a>
 

