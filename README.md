@@ -1,0 +1,2 @@
+# Generator-Theme
+Wordpress theme
